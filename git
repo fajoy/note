@@ -1,0 +1,34 @@
+新增git repository
+
+touch README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/fajoy/note.git
+git push -u origin master
+
+
+Push 已存在的 repository
+
+git remote add origin https://github.com/fajoy/note.git
+git push -u origin master
+
+
+移除遠端branch
+git push origin :<branchName>
+
+移除版本控管 但檔案不移除實際檔案
+git rm --cached <file>...
+
+更新檔案
+git add <file>...
+
+復原檔案
+git checkout -- <file>...
+git checkout HEAD <file>...
+
+復原前一次commit 同時復原檔案
+git reset --hard HEAD^
+
+復原前一次commit 但不復原檔案
+git reset --soft HEAD^
