@@ -1,0 +1,19 @@
+ref http://www.gta.ufrj.br/omni/index.php?option=com_content&view=article&id=30&Itemid=26
+
+
+echo "deb http://updates.onlab.us/debian stable contrib" > /etc/apt/sources.list.d/flowvisor
+
+apt-get update && apt-get install  flowvisor
+
+
+#relation dir
+/etc/flowvisor
+/usr/share/db/flowvisor
+/var/log/flowvisor
+
+
+chown -R flowvisor:flowvidor /usr/share/db/flowvisor/FlowVisorDB
+
+step 1
+fvconfig generate /etc/flowvisor/json.config
+fvconfig  load config.json
