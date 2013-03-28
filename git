@@ -35,3 +35,10 @@ git reset --soft HEAD^
 
 檢視所有檔案 已被板控管的檔案
 git log --name-status | sed -ne 's/^A[^u]//p' | sort -u
+
+
+
+git config --global user.name "Your Name"
+git config --global user.email you@example.com
+
+
